@@ -1,0 +1,16 @@
+name: print txt file
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    types: [opened, closed, synchronize]
+
+jobs:
+  echo-show:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "$(cat hello_world.txt)"
