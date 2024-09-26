@@ -2,8 +2,9 @@ name: print txt file
 
 on:
   push:
-    - master
-    - main
+    branches:
+      - master
+      - main
 
 jobs:
   echo-show:
