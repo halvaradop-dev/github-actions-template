@@ -1,0 +1,13 @@
+name: print txt file
+
+on:
+  push:
+    - master
+    - main
+
+jobs:
+  echo-show:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "$(cat hello_world.txt)"
